@@ -1,0 +1,526 @@
+Σχόλιο: ;;;=====ΣΩΣΤΗ ΣΥΝΤΑΞΗ FACT=====
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = this
+LEXER: IDENTIFIER = is
+LEXER: IDENTIFIER = a
+LEXER: IDENTIFIER = fact
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρο γεγονός 1
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = this_is_also_a_fact
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρο γεγονός 2
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = this
+LEXER: IDENTIFIER = is
+LEXER: IDENTIFIER = a
+LEXER: IDENTIFIER = float
+LEXER: FLOAT = 9.6
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρο γεγονός 3
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = this
+LEXER: IDENTIFIER = is
+LEXER: IDENTIFIER = an
+LEXER: IDENTIFIER = int_exp
+LEXER: INT_EXP = 0e0
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρο γεγονός 4
+LEXER: NEWLINE
+LEXER: NEWLINE
+Σχόλιο: ;;;=====ΣΩΣΤΗ ΣΥΝΤΑΞΗ DEFFACT=====
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = cube
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = color
+LEXER: IDENTIFIER = A
+LEXER: IDENTIFIER = is
+LEXER: IDENTIFIER = Blue
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρο γεγονός 5
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = color
+LEXER: INT = 2
+LEXER: IDENTIFIER = is
+LEXER: IDENTIFIER = Red
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρο γεγονός 6
+LEXER: NEWLINE
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρη δήλωση deffacts (cube), έκφραση 7
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: NEWLINE
+Σχόλιο: ;;;=====ΣΩΣΤΗ ΣΥΝΤΑΞΗ ΠΡΑΞΕΩΝ=====
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: INT = 5
+LEXER: INT = 5
+LEXER: RIGHT PARETNHESIS = )
+Αποτέλεσμα πρόσθεσης: 10
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: INT = 9
+LEXER: INT = 2
+LEXER: RIGHT PARETNHESIS = )
+Αποτέλεσμα αφαίρεσης: 7
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: INT = 3
+LEXER: INT = 6
+LEXER: RIGHT PARETNHESIS = )
+Αποτέλεσμα πολλαπλασιασμού: 18
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: INT = 30
+LEXER: INT = 6
+Αποτέλεσμα διαίρεσης: 5
+LEXER: RIGHT PARETNHESIS = )
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: INT = 9
+LEXER: INT = 4
+Αποτέλεσμα διαίρεσης: 2 με υπόλοιπο 1
+LEXER: RIGHT PARETNHESIS = )
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: INT = 10
+LEXER: INT = 0
+Σφάλμα: Διαίρεση με το μηδέν!
+LEXER: RIGHT PARETNHESIS = )
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: NEWLINE
+Σχόλιο: ;;;=====ΣΩΣΤΗ ΣΥΝΤΑΞΗ ΣΥΓΚΡΙΣΗΣ=====
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: INT = 4
+LEXER: INT = 5
+LEXER: RIGHT PARETNHESIS = )
+Έκφραση EQUAL: 4 == 5 -> false
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: INT = 5
+LEXER: LEFT PARETNHESIS = (
+LEXER: INT = 3
+LEXER: INT = 2
+LEXER: RIGHT PARETNHESIS = )
+Αποτέλεσμα πρόσθεσης: 5
+LEXER: RIGHT PARETNHESIS = )
+Έκφραση EQUAL: 5 == 5 -> true
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: NEWLINE
+Σχόλιο: ;;;=====ΣΩΣΤΗ ΣΥΝΤΑΞΗ BIND=====
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: VARIABLE = ?var
+LEXER: INT = 15
+LEXER: RIGHT PARETNHESIS = )
+Εκχωρήθηκε η μεταβλητή ?var με τιμή 15 στην έκφραση 8
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: VARIABLE = ?var2
+LEXER: LEFT PARETNHESIS = (
+LEXER: INT = -5
+LEXER: INT = 3
+LEXER: RIGHT PARETNHESIS = )
+Αποτέλεσμα πρόσθεσης: -2
+LEXER: RIGHT PARETNHESIS = )
+Εκχωρήθηκε η μεταβλητή ?var2 με τιμή -2 στην έκφραση 9
+LEXER: NEWLINE
+LEXER: NEWLINE
+Σχόλιο: ;;;=====ΣΩΣΤΗ ΣΥΝΤΑΞΗ ΠΡΑΞΕΩΝ ΜΕ ΜΕΤΑΒΛΗΤΗ=====
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: VARIABLE = ?var
+LEXER: INT = 2
+LEXER: INT = 1
+LEXER: RIGHT PARETNHESIS = )
+Αποτέλεσμα πρόσθεσης: 18
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: VARIABLE = ?var
+LEXER: INT = 2
+LEXER: INT = 1
+LEXER: RIGHT PARETNHESIS = )
+Αποτέλεσμα αφαίρεσης: 12
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: INT = 2
+LEXER: VARIABLE = ?var2
+LEXER: INT = 3
+LEXER: RIGHT PARETNHESIS = )
+Αποτέλεσμα πολλαπλασιασμού: -12
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: VARIABLE = ?var
+LEXER: INT = 5
+Αποτέλεσμα διαίρεσης: 3
+LEXER: INT = 3
+Ενδιάμεσο αποτέλεσμα: 1
+LEXER: RIGHT PARETNHESIS = )
+LEXER: NEWLINE
+LEXER: NEWLINE
+Σχόλιο: ;;;=====ΣΩΣΤΗ ΣΥΝΤΑΞΗ ΣΥΓΚΡΙΣΗΣ ΜΕ ΜΕΤΑΒΛΗΤΗ=====
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: VARIABLE = ?var
+LEXER: INT = 15
+LEXER: RIGHT PARETNHESIS = )
+Έκφραση EQUAL: 15 == 15 -> true
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: VARIABLE = ?var
+LEXER: LEFT PARETNHESIS = (
+LEXER: INT = 20
+LEXER: INT = 5
+LEXER: RIGHT PARETNHESIS = )
+Αποτέλεσμα αφαίρεσης: 15
+LEXER: RIGHT PARETNHESIS = )
+Έκφραση EQUAL: 15 == 15 -> true
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: TEST = test
+LEXER: LEFT PARETNHESIS = (
+LEXER: VARIABLE = ?var2
+LEXER: INT = 2
+LEXER: RIGHT PARETNHESIS = )
+Έκφραση EQUAL: -2 == 2 -> false
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρη έκφραση test 10 (αποτέλεσμα: 0)
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: NEWLINE
+Σχόλιο: ;;;=====ΣΩΣΤΗ ΣΥΝΤΑΞΗ PRINTOUT=====
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: PRINTOUT = printout
+LEXER: IDENTIFIER = example
+LEXER: LEFT PARETNHESIS = (
+LEXER: STRING = "this is a test"
+LEXER: RIGHT PARETNHESIS = )
+LEXER: RIGHT PARETNHESIS = )
+"this is a test"
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: NEWLINE
+Σχόλιο: ;;;=====ΠΑΡΑΔΕΙΓΜΑ ΑΠΟ ΕΚΦΩΝΗΣΗ + ΠΡΑΞΗ ΚΑΙ BIND=====
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = static-facts
+LEXER: NEWLINE
+Σχόλιο: ;;; food declarations  
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = food-at
+LEXER: INT = 4
+LEXER: INT = 2
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρο γεγονός 11
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = food-at
+LEXER: INT = 5
+LEXER: INT = 2
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρο γεγονός 12
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρη δήλωση deffacts (static-facts), έκφραση 13
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = dynamic-facts
+LEXER: NEWLINE
+Σχόλιο: ;;;pacman declaration
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = pacman-at
+LEXER: INT = 6
+LEXER: INT = 2
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρο γεγονός 14
+LEXER: NEWLINE
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρη δήλωση deffacts (dynamic-facts), έκφραση 15
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: DEFRULE = defrule
+LEXER: IDENTIFIER = move-UP
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = pacman-at
+LEXER: VARIABLE = ?x
+LEXER: VARIABLE = ?y
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρο γεγονός 16
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = food-at
+LEXER: VARIABLE = ?z
+LEXER: VARIABLE = ?y
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρο γεγονός 17
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: TEST = test
+LEXER: LEFT PARETNHESIS = (
+LEXER: VARIABLE = ?z
+WARNING: Η μεταβλητή ?z δεν έχει γίνει bind. Χρησιμοποιείται τιμή 0.
+LEXER: LEFT PARETNHESIS = (
+LEXER: VARIABLE = ?x
+WARNING: Η μεταβλητή ?x δεν έχει γίνει bind. Χρησιμοποιείται τιμή 0.
+LEXER: INT = 1
+LEXER: RIGHT PARETNHESIS = )
+Αποτέλεσμα αφαίρεσης: -1
+LEXER: RIGHT PARETNHESIS = )
+Έκφραση EQUAL: 0 == -1 -> false
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρη έκφραση test 18 (αποτέλεσμα: 0)
+LEXER: NEWLINE
+LEXER: NEWLINE
+Σχόλιο: ;;;just prints a message
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: PRINTOUT = printout
+LEXER: IDENTIFIER = t
+LEXER: LEFT PARETNHESIS = (
+LEXER: STRING = "pacman has reached food"
+LEXER: RIGHT PARETNHESIS = )
+LEXER: RIGHT PARETNHESIS = )
+"pacman has reached food"
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: PRINTOUT = printout
+LEXER: IDENTIFIER = t
+LEXER: LEFT PARETNHESIS = (
+LEXER: STRING = "pacman has reached food 2"
+LEXER: RIGHT PARETNHESIS = )
+LEXER: RIGHT PARETNHESIS = )
+"pacman has reached food 2"
+LEXER: NEWLINE
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρη δήλωση defrule (move-UP), έκφραση 19
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: NEWLINE
+Σχόλιο: ;;;=====ΔΟΚΙΜΗ ΓΙΑ WARNINGS=====
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: DEFRULE = defrule
+LEXER: IDENTIFIER = NAME
+LEXER: NEWLINE
+LEXER: RIGHT PARETNHESIS = )
+WARNING: Κενός κανόνας defrule (χωρίς patterns ή actions).
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: DEFRULE = defrule
+LEXER: IDENTIFIER = no-arrow
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = akyros
+LEXER: IDENTIFIER = kanonas
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρο γεγονός 20
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: TEST = test
+LEXER: LEFT PARETNHESIS = (
+LEXER: VARIABLE = ?num
+WARNING: Η μεταβλητή ?num δεν έχει γίνει bind. Χρησιμοποιείται τιμή 0.
+LEXER: INT = 2
+LEXER: RIGHT PARETNHESIS = )
+Έκφραση EQUAL: 0 == 2 -> false
+LEXER: RIGHT PARETNHESIS = )
+Έγκυρη έκφραση test 21 (αποτέλεσμα: 0)
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: PRINTOUT = printout
+LEXER: IDENTIFIER = t
+LEXER: LEFT PARETNHESIS = (
+LEXER: STRING = "this is sad"
+LEXER: RIGHT PARETNHESIS = )
+LEXER: RIGHT PARETNHESIS = )
+"this is sad"
+LEXER: NEWLINE
+LEXER: RIGHT PARETNHESIS = )
+WARNING: Λείπει "->" (ARROW) στο defrule. Ξεκίνησε απευθείας με action χωρίς σύμβολο μετάβασης.
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: DEFRULE = defrule
+LEXER: IDENTIFIER = no-facts
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: PRINTOUT = printout
+LEXER: LEFT PARETNHESIS = (
+LEXER: STRING = "this has no facts"
+LEXER: RIGHT PARETNHESIS = )
+LEXER: RIGHT PARETNHESIS = )
+WARNING: Δεν υπάρχει identifier μετά το printout 
+"this has no facts"
+LEXER: NEWLINE
+LEXER: RIGHT PARETNHESIS = )
+WARNING: Ο κανόνας defrule "no-facts" δεν έχει καθόλου συνθήκες πριν το "->"
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: INT = 5
+LEXER: RIGHT PARETNHESIS = )
+WARNING: Έχεις δώσει 1 operand άρα προσθέτεις με το 0
+Αποτέλεμσα Πρόσθεσης: 5
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: INT = 5
+LEXER: RIGHT PARETNHESIS = )
+WARNING: Έχεις δώσει 1 operand άρα αφαιρείς με το 0
+Αποτέλεσμα αφαίρεσης: 5
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: INT = 5
+LEXER: RIGHT PARETNHESIS = )
+WARNING: Έχεις δώσει 1 operand άρα πολλαπλασιάζεις με το 1
+Αποτέλεσμα πολλαπλασιασμού: 5
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: PRINTOUT = printout
+LEXER: IDENTIFIER = t
+LEXER: LEFT PARETNHESIS = (
+LEXER: STRING = "this is normal"
+LEXER: RIGHT PARETNHESIS = )
+LEXER: RIGHT PARETNHESIS = )
+"this is normal"
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: PRINTOUT = printout
+LEXER: LEFT PARETNHESIS = (
+LEXER: STRING = "this has no identifier"
+LEXER: RIGHT PARETNHESIS = )
+LEXER: RIGHT PARETNHESIS = )
+WARNING: Δεν υπάρχει identifier μετά το printout 
+"this has no identifier"
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: VARIABLE = ?variable
+LEXER: INT = 5
+LEXER: RIGHT PARETNHESIS = )
+Εκχωρήθηκε η μεταβλητή ?variable με τιμή 5 στην έκφραση 22
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: VARIABLE = ?variable
+LEXER: INT = 100
+LEXER: RIGHT PARETNHESIS = )
+Εκχωρήθηκε η μεταβλητή ?variable με τιμή 100 στην έκφραση 23
+WARNING: Η μεταβλητή ?variable έχει ήδη τιμή 5 και γίνεται rebind σε 100
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: PRINTOUT = printout
+LEXER: IDENTIFIER = t
+LEXER: RIGHT PARETNHESIS = )
+WARNING: Εντολή printout χωρίς περιεχόμενο για εκτύπωση.
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: PRINTOUT = printout
+LEXER: RIGHT PARETNHESIS = )
+WARNING: Κενή εντολή printout χωρίς identifier ή τιμές.
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: VARIABLE = ?val
+LEXER: RIGHT PARETNHESIS = )
+WARNING: Η εντολή bind για τη μεταβλητή ?val δεν έχει τιμή.
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: TEST = test
+LEXER: LEFT PARETNHESIS = (
+LEXER: INT = 5
+LEXER: INT = 5
+LEXER: RIGHT PARETNHESIS = )
+LEXER: RIGHT PARETNHESIS = )
+WARNING: Λείπει τελεστής σύγκρισης (π.χ. =) στη συνθήκη test: test (5 5)
+LEXER: NEWLINE
+LEXER: NEWLINE
+LEXER: NEWLINE
+Σχόλιο: ;;;=====FATAL ERRORS=====
+LEXER: NEWLINE
+Σχόλιο: ;;; εδώ θα έχουμε  error και στην προσθεση γιατι δεν κλείνει η παρένθεση
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = this
+LEXER: IDENTIFIER = is
+LEXER: IDENTIFIER = a
+LEXER: IDENTIFIER = wrong
+LEXER: IDENTIFIER = fact
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+Σφάλμα σύνταξης στην έκφραση 24
+Συντακτικό σφάλμα (panic mode), προχωράμε στην επόμενη εντολή.
+LEXER: INT = 5
+Σφάλμα σύνταξης στην έκφραση 25
+Συντακτικό σφάλμα (panic mode), προχωράμε στην επόμενη εντολή.
+LEXER: INT = 5
+Σφάλμα σύνταξης στην έκφραση 26
+Συντακτικό σφάλμα (panic mode), προχωράμε στην επόμενη εντολή.
+LEXER: RIGHT PARETNHESIS = )
+Σφάλμα σύνταξης στην έκφραση 27
+Συντακτικό σφάλμα (panic mode), προχωράμε στην επόμενη εντολή.
+LEXER: NEWLINE
+LEXER: NEWLINE
+Σχόλιο: ;;; Λαθος bind
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: IDENTIFIER = Notvar
+Σφάλμα σύνταξης στην έκφραση 28
+Συντακτικό σφάλμα (panic mode), προχωράμε στην επόμενη εντολή.
+LEXER: INT = 5
+Σφάλμα σύνταξης στην έκφραση 29
+Συντακτικό σφάλμα (panic mode), προχωράμε στην επόμενη εντολή.
+LEXER: RIGHT PARETNHESIS = )
+Σφάλμα σύνταξης στην έκφραση 30
+Συντακτικό σφάλμα (panic mode), προχωράμε στην επόμενη εντολή.
+LEXER: NEWLINE
+LEXER: NEWLINE
+Σχόλιο: ;;; Λαθος test
+LEXER: NEWLINE
+LEXER: LEFT PARETNHESIS = (
+LEXER: TEST = test
+LEXER: LEFT PARETNHESIS = (
+Σφάλμα σύνταξης στην έκφραση 31
+Συντακτικό σφάλμα (panic mode), προχωράμε στην επόμενη εντολή.
+LEXER: INT = 5
+Σφάλμα σύνταξης στην έκφραση 32
+Συντακτικό σφάλμα (panic mode), προχωράμε στην επόμενη εντολή.
+LEXER: INT = 5
+Σφάλμα σύνταξης στην έκφραση 33
+Συντακτικό σφάλμα (panic mode), προχωράμε στην επόμενη εντολή.
+LEXER: RIGHT PARETNHESIS = )
+Σφάλμα σύνταξης στην έκφραση 34
+Συντακτικό σφάλμα (panic mode), προχωράμε στην επόμενη εντολή.
+LEXER: RIGHT PARETNHESIS = )
+Σφάλμα σύνταξης στην έκφραση 35
+Συντακτικό σφάλμα (panic mode), προχωράμε στην επόμενη εντολή.
+LEXER: NEWLINE
+
+=== RUNNING PARSER BUILD ===
+ΣΩΣΤΕΣ ΛΕΞΕΙΣ: 346
+ΣΩΣΤΕΣ ΕΚΦΡΑΣΕΙΣ: 49
+ΛΑΘΟΣ ΛΕΞΕΙΣ: 0
+ΛΑΘΟΣ ΕΚΦΡΑΣΕΙΣ: 12
+ΛΑΘΗ ΣΥΝΤΑΞΗΣ (panic mode): 12
+PARSER WARNINGS: 16

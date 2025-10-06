@@ -1,0 +1,114 @@
+;;;=====ΣΩΣΤΗ ΣΥΝΤΑΞΗ FACT=====
+(this is a fact)
+(this_is_also_a_fact)
+(this is a float 9.6)
+(this is an int_exp 0e0)
+
+;;;=====ΣΩΣΤΗ ΣΥΝΤΑΞΗ DEFFACT=====
+(deffacts cube
+    (color A is Blue)
+    (color 2 is Red)
+)
+
+
+;;;=====ΣΩΣΤΗ ΣΥΝΤΑΞΗ ΠΡΑΞΕΩΝ=====
+(+ 5 5)
+(- 9 2)
+(* 3 6)
+(/ 30 6)
+(/ 9 4)
+(/ 10 0)
+
+
+;;;=====ΣΩΣΤΗ ΣΥΝΤΑΞΗ ΣΥΓΚΡΙΣΗΣ=====
+(= 4 5)
+(= 5 (+ 3 2))
+
+
+;;;=====ΣΩΣΤΗ ΣΥΝΤΑΞΗ BIND=====
+(bind ?var 15)
+(bind ?var2 (+ -5 3))
+
+;;;=====ΣΩΣΤΗ ΣΥΝΤΑΞΗ ΠΡΑΞΕΩΝ ΜΕ ΜΕΤΑΒΛΗΤΗ=====
+(+ ?var 2 1)
+(- ?var 2 1)
+(* 2 ?var2 3)
+(/ ?var 5 3)
+
+;;;=====ΣΩΣΤΗ ΣΥΝΤΑΞΗ ΣΥΓΚΡΙΣΗΣ ΜΕ ΜΕΤΑΒΛΗΤΗ=====
+(= ?var 15)
+(= ?var (- 20 5))
+(test (= ?var2 2))
+
+
+;;;=====ΣΩΣΤΗ ΣΥΝΤΑΞΗ PRINTOUT=====
+(printout example ("this is a test"))
+
+
+
+;;;=====ΠΑΡΑΔΕΙΓΜΑ ΑΠΟ ΕΚΦΩΝΗΣΗ + ΠΡΑΞΗ ΚΑΙ BIND=====
+(deffacts static-facts  
+;;; food declarations  
+(food-at 4 2) 
+(food-at 5 2) )
+(deffacts dynamic-facts
+ ;;;pacman declaration
+ (pacman-at 6 2)
+) 
+(defrule move-UP
+ (pacman-at ?x ?y)
+ (food-at ?z ?y)
+ (test (= ?z (- ?x 1)))
+->
+;;;just prints a message
+ (printout t ("pacman has reached food"))
+ (printout t ("pacman has reached food 2"))
+)
+
+
+;;;=====ΔΟΚΙΜΗ ΓΙΑ WARNINGS=====
+(defrule NAME 
+)
+
+
+(defrule no-arrow
+(akyros kanonas)
+(test (= ?num 2)) 
+
+(printout t ("this is sad"))
+)
+
+(defrule no-facts
+->
+(printout("this has no facts"))
+)
+
+(+ 5 )
+(- 5)
+(* 5)
+
+(printout t("this is normal"))
+
+(printout ("this has no identifier"))
+
+(bind ?variable 5)
+(bind ?variable 100)
+
+(printout t)
+(printout )
+
+(bind ?val )
+
+(test (5 5))
+
+
+;;;=====FATAL ERRORS=====
+;;; εδώ θα έχουμε  error και στην προσθεση γιατι δεν κλείνει η παρένθεση
+(this is a wrong fact
+(+ 5 5)
+
+;;; Λαθος bind
+(bind Notvar 5)
+
+;;; Λαθος test
+(test (+ 5 5))
