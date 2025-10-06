@@ -1,40 +1,47 @@
-# Lexical & Syntax Analyzer for CLIPS/Lisp-like Language
+# README
 
-## Project & Group Information
-Αυτό το έργο αναπτύχθηκε ως ομαδική εργασία για την εκπλήρωση των εργαστηριακών απαιτήσεων του μαθήματος **Μεταγλωττιστές (Compilers)**.
+## Group Project: Lexical & Syntax Analyzer for CLIPS/Lisp-like Language
 
-- **Course:** Compilers (Μεταγλωττιστές)  
+### Project & Group Information
+This project was developed as a group assignment to fulfill the laboratory requirements for the Compilers course.
+
+- **Course:** Compilers
 - **Context:** Group Project for Course Requirements  
-- **Participants:** 5 μέλη  
+- **Participants:** A team of 4 people  
 
-## Overview and Functionality
-Το έργο υλοποιεί έναν **Lexical Analyzer (Lexer)** και έναν **Syntax Analyzer (Parser)** χρησιμοποιώντας τα εργαλεία **Flex** και **Bison**, αντίστοιχα.  
-Η γλώσσα στόχος βασίζεται σε **S-expressions**, παρόμοια με CLIPS ή Lisp.
+### Overview and Functionality
+The project implements a Lexical Analyzer (Lexer) and a Syntax Analyzer (Parser) using the Flex and Bison tools, respectively. The target language features a structure heavily reliant on S-expressions, similar to CLIPS or Lisp.
 
----
+#### 1. Lexical Analyzer (Lexer - all_tokens2.l)
+The Lexer is responsible for tokenizing the input file, correctly identifying the following elements:
 
-### 1. Lexical Analyzer (Lexer - `all_tokens2.l`)
-Ο Lexer είναι υπεύθυνος για την αναγνώριση των tokens στο input αρχείο, όπως:
+- **Keywords:** deffacts, defrule, bind, test, read, and printout.  
+- **Constants:** Integers (INTCONST), Floats (FLOAT_RE), and Scientific Notation Integers (INT_EXP_RE).  
+- **Variables:** Identified by the prefix ? (e.g., ?var).  
+- **Operators & Delimiters:** Arithmetic operators (+, -, *, /), Equality (=), the rule separator (->), parentheses ((, )).  
+- **Comments:** Comments starting with ; are ignored by the parser.  
 
-- **Keywords:** `deffacts`, `defrule`, `bind`, `test`, `read`, `printout`  
-- **Constants:**  
-  - Integers (`INTCONST`)  
-  - Floats (`FLOAT_RE`)  
-  - Scientific Notation Integers (`INT_EXP_RE`)  
-- **Variables:** Ξεκινούν με `?` (π.χ., `?var`)  
-- **Operators & Delimiters:**  
-  - Arithmetic: `+`, `-`, `*`, `/`  
-  - Equality: `=`  
-  - Rule separator: `->`  
-  - Parentheses: `(`, `)`  
-- **Comments:** Ξεκινάνε με `;` και αγνοούνται από τον parser  
+#### 2. Syntax Analyzer (Parser - parser2.y)
+The Parser enforces the grammar rules and performs basic semantic actions:
 
----
+- **Declarations:** Supports valid fact expressions, and the top-level declarations deffacts and defrule.  
+- **Arithmetic Operations:** Handles standard operations (+, -, *, /) with multiple operands.  
+- **Division:** Implements checks for division by zero and calculates the remainder for integer division.  
+- **Variable Binding:** The bind command allows assigning integer values or the result of calculations to variables.  
+- **Variable Scope:** The parser includes logic to retrieve variable values and issues a warning if a variable is used before it is bound (defaulting to 0). It also warns on a rebind of an already assigned variable.  
+- **Equality and Testing:** Supports equality comparisons (=) between constants and/or calculation results. The test condition is used within rules to evaluate these expressions.  
+- **I/O:** Implements the printout action for printing strings and the read function to accept user input during execution (for bind).  
+- **Error Handling:** The parser implements panic mode recovery for syntax errors, continuing to the next statement after encountering an error. Warnings are issued for common issues like missing operators in test, rules with no conditions, or missing content in printout.  
 
-### 2. Syntax Analyzer (Parser - `parser2.y`)
-Ο Parser επιβλέπει τη σύνταξη και εκτελεί βασικές **semantic actions**:
+### Build and Run Instructions
+The project uses a standard Flex/Bison build process managed by the Makefile.
 
-- **Declarations:** Υποστηρίζει έγκυρες **fact expressions** και top-level declarations (`deffacts`, `defrule`)  
-- **Arithmetic Operations:** Υποστηρίζει `+`, `-`, `*`, `/` με πολλαπλούς τελεστέους  
-- **Division:** Ελέγχει για **διαίρεση με μηδέν** και υπολογίζει το υπόλοιπο για ακέραια διαίρεση  
-- **Variable Binding:** Η εντολή `bind` εκχωρεί ακέραιες τιμές ή αποτελέσματα υπολογισμών σε μετα
+| Command | Description |
+|---------|-------------|
+| `make all` or `make` | Generates the lex.yy.c and parser2.tab.c files and compiles the executable uni_parser2. |
+| `make run` | Executes the compiled program uni_parser2, using input.txt as the source file and writing the Lexer/Parser output (including results, errors, and warnings) to output.txt. |
+| `make clean` | Removes the generated files (uni_parser2, .c, .h). |
+
+#### Execution
+```bash
+make run
